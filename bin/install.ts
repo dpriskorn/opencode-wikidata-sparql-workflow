@@ -16,6 +16,7 @@ const PLUGIN_NAME = 'opencode-wikidata-sparql-workflow';
 interface OpenCodeConfig {
   $schema?: string;
   plugin?: string[];
+  mcp?: Record<string, unknown>;
   [key: string]: unknown;
 }
 
@@ -42,6 +43,8 @@ function saveConfig(config: OpenCodeConfig): undefined {
   return undefined;
 }
 
+const WD_MCP_URL = 'https://wd-mcp.wmcloud.org/mcp';
+
 function install(): undefined {
   console.log(`Installing ${PLUGIN_NAME} to ${CONFIG_PATH}...`);
   const config = loadConfig();
@@ -52,10 +55,18 @@ function install(): undefined {
 
   if (config.plugin.includes(PLUGIN_NAME)) {
     console.log('Plugin already installed.');
-    return undefined;
+  } else {
+    config.plugin.push(PLUGIN_NAME);
   }
 
-  config.plugin.push(PLUGIN_NAME);
+  if (!config.mcp) {
+    config.mcp = {};
+  }
+  config.mcp.wikidata = {
+    type: 'remote',
+    url: WD_MCP_URL,
+  };
+
   saveConfig(config);
   console.log('Plugin installed successfully!');
   console.log('Restart opencode to use the plugin.');
@@ -81,6 +92,12 @@ function uninstall(): undefined {
   if (config.plugin.length === 0) {
     config.plugin = undefined;
   }
+
+  if (config.mcp) {
+    const { wikidata: _removed, ...restMcp } = config.mcp;
+    config.mcp = Object.keys(restMcp).length > 0 ? restMcp : undefined;
+  }
+
   saveConfig(config);
   console.log('Plugin uninstalled successfully!');
   console.log('Restart opencode to apply changes.');
