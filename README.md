@@ -102,10 +102,21 @@ The AI is guided through phases by calling `wikidata_workflow_step`, which retur
 - Bun runtime (for installation script)
 - Access to `https://wd-mcp.wmcloud.org/mcp`
 
+## Dependencies
+
+- [@opencode-ai/plugin](https://www.npmjs.com/package/@opencode-ai/plugin) (peer dependency)
+- [typescript](https://www.npmjs.com/package/typescript)
+- [@biomejs/biome](https://www.npmjs.com/package/@biomejs/biome)
+
+
 ## License
 
 GPL-3.0-or-later
 
-Copyright (c) 2026 Wikimedia Deutschland e.V.
+Copyright (c) 2026 Nizo Priskorn
 
 This plugin is based on the [wikidata-mcp](https://github.com/wikimedia-de/wikidata-mcp) project.
+
+## Credit
+
+The SPARQL generation workflow is based on the [WikidataMCP SPARQLGeneration workflow commit b8fc2b8eff6ff25605efca7318f26f21736e7489](https://github.com/wmde/WikidataMCP/tree/sparql_workflow/workflows/SPARQLGeneration) by Philippe Saade (WMDE).
