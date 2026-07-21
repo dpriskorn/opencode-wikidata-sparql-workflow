@@ -10,7 +10,8 @@ The workflow ensures the AI **never invents QIDs or PIDs** - it must discover al
 
 ## Screenshot
 <img width="800" height="1327" alt="bild" src="https://github.com/user-attachments/assets/15ebd61e-55d2-41c1-8247-0600fc199439" />
-
+<img width="776" height="945" alt="bild" src="https://github.com/user-attachments/assets/da7b5e63-fb42-4d6c-a759-0034218ad1e6" />
+All queries work and it correctly excluded the fictional ones. 🥳
 
 ## Installation
 
