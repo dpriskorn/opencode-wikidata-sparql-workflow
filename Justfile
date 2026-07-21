@@ -43,9 +43,13 @@ ci: lint typecheck test
 watch:
     echo "No watch mode configured"
 
-# Development: install dependencies
+# Development: link package for local development
 dev-install:
-    bun install
+    npm link
+
+# Development: unlink package
+dev-unlink:
+    npm unlink
 
 # Bump version (patch)
 bump-patch:

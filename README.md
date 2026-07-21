@@ -28,9 +28,7 @@ This will add the plugin to your `~/.config/opencode/opencode.json`.
 
 1. Install the package:
 ```bash
-npm install -g opencode-wikidata-sparql-workflow
-# or
-bun add -g opencode-wikidata-sparql-workflow
+npm link
 ```
 
 2. Add to your `~/.config/opencode/opencode.json`:
