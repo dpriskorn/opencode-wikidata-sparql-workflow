@@ -36,7 +36,8 @@ export async function executeSparql(
     const response = await fetch(url.toString(), {
       method: 'GET',
       headers: {
-        'User-Agent': 'Wikidata MCP SPARQL Generation (opencode-plugin@wikimedia.de)',
+        'User-Agent':
+          'opencode-wikidata-sparql-workflow/0.1.0 (contact: https://github.com/dpriskorn/opencode-wikidata-sparql-workflow)',
         Accept: 'application/sparql-results+json',
       },
       signal: AbortSignal.timeout(30000),
