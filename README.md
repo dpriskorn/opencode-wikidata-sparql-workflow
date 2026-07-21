@@ -8,6 +8,10 @@ This plugin implements the same 8-step LangGraph workflow from [wikidata-mcp](ht
 
 The workflow ensures the AI **never invents QIDs or PIDs** - it must discover all identifiers through the Wikidata MCP tools before using them in SPARQL.
 
+## Screenshot
+<img width="800" height="1327" alt="bild" src="https://github.com/user-attachments/assets/15ebd61e-55d2-41c1-8247-0600fc199439" />
+
+
 ## Installation
 
 ### Option 1: CLI Installer (Recommended)
