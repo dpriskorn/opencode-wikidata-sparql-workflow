@@ -31,7 +31,9 @@ export async function executeSparql(
     };
   }
   try {
-    const response = await fetch('https://query.wikidata.org/sparql', {
+    const url = new URL('https://query.wikidata.org/sparql');
+    url.searchParams.set('query', sparql);
+    const response = await fetch(url.toString(), {
       method: 'GET',
       headers: {
         'User-Agent': 'Wikidata MCP SPARQL Generation (opencode-plugin@wikimedia.de)',
