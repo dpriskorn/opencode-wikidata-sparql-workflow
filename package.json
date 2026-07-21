@@ -1,0 +1,52 @@
+{
+  "name": "opencode-wikidata-sparql-workflow",
+  "version": "0.1.0",
+  "description": "OpenCode plugin providing a guided workflow for generating grounded SPARQL queries against Wikidata. Imitates the wikidata-mcp LangGraph workflow.",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./plugin": "./src/plugin.ts",
+    "./prompts": "./src/prompts/index.ts",
+    "./tools": "./src/tools/definitions.ts",
+    "./utils": "./src/utils/index.ts"
+  },
+  "files": [".opencode/", "src/", "bin/", "README.md", "LICENSE"],
+  "bin": {
+    "opencode-wikidata-sparql-workflow": "./bin/install.ts"
+  },
+  "scripts": {
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "typecheck": "tsc --noEmit",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "wikidata",
+    "sparql",
+    "mcp",
+    "agent-workflow",
+    "wikidata-mcp"
+  ],
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wikimedia-de/wikidata-mcp.git"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "^1.0.0"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.0.0",
+    "@biomejs/biome": "^1.9.0",
+    "@types/bun": "^1.1.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "bun": ">=1.0.0"
+  }
+}

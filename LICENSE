@@ -1,0 +1,22 @@
+GNU General Public License v3.0 or later (GPL-3.0-or-later)
+
+Copyright (c) 2026 Wikimedia Deutschland e.V.
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>
+
+As an exception to GPL-3.0-or-later terms, the files in this repository
+may be linked (imported, required, or included) by OpenCode plugin system
+without affecting the license of this plugin. The plugin system itself
+is a separate proprietary product; this plugin's source code remains
+GPL-3.0-or-later when used standalone.
