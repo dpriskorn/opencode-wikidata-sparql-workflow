@@ -123,6 +123,8 @@ The AI is guided through phases by calling `wikidata_workflow_step`, which retur
 
 # See also
 * https://github.com/jagan-shanmugam/open-streetmap-mcp
+* https://www.pulsemcp.com/servers/nervsystems-openstreetmap
+* https://github.com/wiseman/osm-mcp
 
 ## License
 
