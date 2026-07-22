@@ -1,12 +1,21 @@
 # Justfile for opencode-wikidata-sparql-workflow
 
-# Install the plugin to opencode
+# Install the plugin to opencode (npm-based)
 install:
     bun run bin/install.ts install
 
-# Uninstall the plugin from opencode
+# Uninstall the plugin from opencode (npm-based)
 uninstall:
     bun run bin/install.ts uninstall
+
+# Install plugin locally via symlink (for local development)
+install-local:
+    mkdir -p ~/.config/opencode/plugins
+    ln -sfn {{justfile_directory()}} ~/.config/opencode/plugins/opencode-wikidata-sparql-workflow
+
+# Uninstall local plugin symlink
+uninstall-local:
+    rm -f ~/.config/opencode/plugins/opencode-wikidata-sparql-workflow
 
 # Reinstall plugin (remove then add)
 reinstall: uninstall install

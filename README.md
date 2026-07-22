@@ -25,22 +25,30 @@ Total time to results for a complicated and specialized query like this: ~1.5 mi
 
 ## Installation
 
-### Option 1: CLI Installer (Recommended)
+This plugin is not published to npm. To install locally:
+
+### Option 1: Using Just (Recommended)
 
 ```bash
-bunx opencode-wikidata-sparql-workflow install
+just install-local
 ```
 
-This will add the plugin to your `~/.config/opencode/opencode.json`.
+This creates a symlink in `~/.config/opencode/plugins/`.
 
-### Option 2: Manual Installation
+### Option 2: Manual Symlink
 
-1. Install the package:
+```bash
+mkdir -p ~/.config/opencode/plugins
+ln -sfn /path/to/opencode-wikidata-sparql-workflow ~/.config/opencode/plugins/opencode-wikidata-sparql-workflow
+```
+
+### Option 3: Using npm link (for development)
+
 ```bash
 npm link
 ```
 
-2. Add to your `~/.config/opencode/opencode.json`:
+Then add to your `~/.config/opencode/opencode.json`:
 ```json
 {
   "$schema": "https://opencode.ai/config.json",
@@ -112,7 +120,7 @@ The AI is guided through phases by calling `wikidata_workflow_step`, which retur
 ## Requirements
 
 - OpenCode
-- Bun runtime (for installation script)
+- [Just](https://github.com/casey/just) (for installation commands)
 - Access to `https://wd-mcp.wmcloud.org/mcp`
 
 ## Dependencies
