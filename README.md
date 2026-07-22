@@ -121,6 +121,8 @@ The AI is guided through phases by calling `wikidata_workflow_step`, which retur
 - [typescript](https://www.npmjs.com/package/typescript)
 - [@biomejs/biome](https://www.npmjs.com/package/@biomejs/biome)
 
+# See also
+* https://github.com/jagan-shanmugam/open-streetmap-mcp
 
 ## License
 
