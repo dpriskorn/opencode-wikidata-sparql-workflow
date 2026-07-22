@@ -9,10 +9,19 @@ This plugin implements the same 8-step LangGraph workflow from [wikidata-mcp](ht
 The workflow ensures the AI **never invents QIDs or PIDs** - it must discover all identifiers through the Wikidata MCP tools before using them in SPARQL.
 
 ## Screenshot
+### English example
 <img width="800" height="1327" alt="bild" src="https://github.com/user-attachments/assets/15ebd61e-55d2-41c1-8247-0600fc199439" />
 <img width="776" height="945" alt="bild" src="https://github.com/user-attachments/assets/da7b5e63-fb42-4d6c-a759-0034218ad1e6" />
 
 All queries work and it correctly excluded the fictional ones. 🥳
+
+### Swedish example with timing
+> "list barbecue sites, campsites, lean-tos, and swimming areas in Sundsvall Municipality? Use wikidata_ask. Filter by QIDs and PIDs, not labels."
+<img width="1354" height="716" alt="bild" src="https://github.com/user-attachments/assets/f47b818e-9f58-4d5c-b5e8-ad4713ef7e7b" />
+<img width="1354" height="716" alt="bild" src="https://github.com/user-attachments/assets/1f1a0237-1ebc-4cbb-b783-76ccc77b3960" />
+<img width="1354" height="716" alt="bild" src="https://github.com/user-attachments/assets/c7bff2b3-0d3a-484e-835b-f72bb91a2245" />
+
+Total time to results for a complicated and specialized query like this: ~1.5 min
 
 ## Installation
 
