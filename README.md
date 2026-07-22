@@ -122,9 +122,9 @@ The AI is guided through phases by calling `wikidata_workflow_step`, which retur
 - [@biomejs/biome](https://www.npmjs.com/package/@biomejs/biome)
 
 # See also
-* https://github.com/jagan-shanmugam/open-streetmap-mcp
-* https://www.pulsemcp.com/servers/nervsystems-openstreetmap
-* https://github.com/wiseman/osm-mcp
+* https://github.com/jagan-shanmugam/open-streetmap-mcp (MIT)
+* https://github.com/wiseman/osm-mcp (license missing)
+* https://github.com/nervsystems/osmmcp (MIT)
 
 ## License
 
